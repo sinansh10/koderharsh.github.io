@@ -1,5 +1,8 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box;   
+}
+*::-webkit-scrollbar{
+    display:none;
 }
 body{       
     /* font-family: 'Vollkorn', serif;
@@ -10,8 +13,7 @@ body{
     font-size: 36px;
     color: #fff;     
     letter-spacing: 5px;    
-    font-weight: bolder;  
-    /* background-color: #0d0d0d;       */   
+    font-weight: bolder;    
     max-height: 100vh; 
 }
 
@@ -22,9 +24,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    /* z-index: 10000;  */
-    box-shadow: 1px 1px 25px 3px white;   
-    cursor: ;
+    box-shadow: 1px 1px 25px 3px white;      
 }
 .preloader-text{
     position: relative;
@@ -72,10 +72,28 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-52%,-55%);
+    transform: translate(-49.5%,-55%);
 }
 .portfolio{
     background-color: salmon;
     height: 100vh;
+}
+@media only screen and (max-width:400px)
+{
+    body{
+        font-size: 26px;        
+    }
+    .box{
+        height: 30px;
+    }
+    .preloader-count{
+        font-size: 80px;
+    }
+    .preloader::before{
+        font-size: 3em;
+    }
+    .preloader-count:after{
+        font-size: 80px;
+    }
 }
 
