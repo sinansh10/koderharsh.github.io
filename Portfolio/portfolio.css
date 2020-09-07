@@ -93,6 +93,7 @@ body{
     }
     .preloader::before{
         font-size: 3em;
+        transform: translate(-49.5%,-60%);
     }
     .preloader-count:after{
         font-size: 100px;
