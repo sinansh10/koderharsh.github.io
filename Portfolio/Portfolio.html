@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">     -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Quattrocento:100,200,300,400,500,600,700,900,1000,1100,1200" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="portfolio">
+        
+    </div>
+    <div class="preloader">
+        <div class="preloader-text">
+            <div class="text-swap-title">
+                <span>I'm</span>
+            </div>
+            <div class="box">
+                <span>waking up...</span>
+                <span>having breakfast...</span>
+                <span>scrolling facebook...</span>
+                <span> watching anime...</span>
+                <span>dressing...</span>
+                <span>on my way...</span>
+                <span> here!</span>
+            </div>
+        </div>
+        <div class="preloader-count">0</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var a = document.querySelectorAll(".box span");
+            var i = 1;
+            $(a[0]).hide(2000, function () {
+                i++;
+                if (i < 7) {
+                    $(this).next().hide(1000, arguments.callee);
+                }
+            });
+        });
+        function preloadercount() {
+            var counter = setInterval(function () {
+                var c = parseInt($(".preloader-count").text());
+                c+=1;
+                $(".preloader-count").text((c).toString());
+                if (c == 100) {
+                    clearInterval(counter);
+                    $(".preloader-count").addClass("Hide");
+                    $(".preloader").addClass("active");
+                }
+            },65);
+            preloader-count();
+        }
+        preloadercount();
+    </script>
+</body>
+
+</html>

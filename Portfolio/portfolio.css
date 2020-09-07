@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+body{       
+    /* font-family: 'Vollkorn', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Quattrocento Sans', sans-serif; */
+    font-family: 'Assistant', sans-serif;
+    font-style: normal;
+    font-size: 36px;
+    color: #fff;     
+    letter-spacing: 5px;    
+    font-weight: bolder;  
+    /* background-color: #0d0d0d;       */   
+    max-height: 100vh; 
+}
+
+.preloader{
+    height: 100vh;
+    background-color: #0d0d0d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 10000;  */
+    box-shadow: 1px 1px 25px 3px white;   
+    cursor: ;
+}
+.preloader-text{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 23px 0 0 30px;      
+    height: 320px;   
+}
+.preloader-text span{
+    display: block;     
+}
+.box{
+    background-color:#0d0d0d;
+    height:45px ;
+    overflow: hidden;  
+    margin-top:3px;
+}
+.preloader-count{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 140px;  
+    color: #0d0d0d; 
+    -webkit-text-stroke: 3px white;
+}
+.preloader-count:after{
+    content: '%';
+    font-size: 140px;    
+}
+.preloader-count .hide{
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+.preloader .active{
+    transform: translateY(-100vh);
+    transition: ease-in-out 2s;
+    transition-delay: 1s;    
+}
+.preloader::before{
+    content: 'LOADING';
+    color: rgba(255, 255, 255,0.02);
+    font-size: 8em;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%,-55%);
+}
+.portfolio{
+    background-color: salmon;
+    height: 100vh;
+}
+
