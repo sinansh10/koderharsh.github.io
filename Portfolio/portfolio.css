@@ -34,11 +34,12 @@ body{
     height: 320px;   
 }
 .preloader-text span{
-    display: block;     
+    display: block;  
+    margin-bottom: 15px;       
 }
 .box{
     background-color:#0d0d0d;
-    height:45px ;
+    height:55px ;
     overflow: hidden;  
     margin-top:3px;
 }
@@ -78,22 +79,22 @@ body{
     background-color: salmon;
     height: 100vh;
 }
-@media only screen and (max-width:450px)
+@media only screen and (max-width:400px)
 {
     body{
         font-size: 26px;        
     }
     .box{
-        height: 30px;
+        height: 35px;
     }
     .preloader-count{
-        font-size: 80px;
+        font-size: 100px;
+        bottom: 50px;
     }
     .preloader::before{
         font-size: 3em;
     }
     .preloader-count:after{
-        font-size: 80px;
+        font-size: 100px;
     }
 }
-
