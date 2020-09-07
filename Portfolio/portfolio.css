@@ -82,10 +82,10 @@ body{
 @media only screen and (max-width:400px)
 {
     body{
-        font-size: 10px;        
+        font-size: 24px;        
     }
     .box{
-        height: 18px;
+        height: 28px;
     }
     .preloader-count{
         font-size: 100px;
