@@ -89,7 +89,7 @@ body{
     }
     .preloader-count{
         font-size: 100px;
-        bottom: 50px;
+        bottom: 55px;
     }
     .preloader::before{
         font-size: 3em;
