@@ -99,16 +99,20 @@ body{
     .preloader-count:after{
         font-size: 85px;
     }
+     .hidea{    
+    transition-duration: 1s;    
+    -webkit-text-fill-color: #fff;
+ }
     .hide{    
         transition-delay: 1s;
         transition-duration: 1s;
         bottom: -150vh;
     }
      .active{
-        transform: translateY(-100vh);
-        transition-duration:  0.5s;
-        transition-delay: 2s;    
-    }
+    transform: translateY(-100vh);
+    transition-duration:  0.5s;
+    transition-delay: 2s;    
+}
 }
 .home{    
     background-color:#3a3636;  
