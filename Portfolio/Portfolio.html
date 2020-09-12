@@ -10,13 +10,13 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Quattrocento:100,200,300,400,500,600,700,900,1000,1100,1200" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+    <script src="portfolio.js"></script>
     <title>Portfolio</title>
 </head>
 
 <body>
-    <div class="portfolio">
-        
-    </div>
     <div class="preloader">
         <div class="preloader-text">
             <div class="text-swap-title">
@@ -34,7 +34,54 @@
         </div>
         <div class="preloader-count">0</div>
     </div>
+    <div class="home">
+        <div class="title">Harsh <div>Tripathi</div>
+        </div>
+        <div class="main1">
+            <div id="main"></div>
+        </div>
+        <nav>
+            <ul>
+                <a href="#">About</a>
+                <a href="#">Code</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </ul>
+        </nav>
+        <div class="legacy">
+            <div class="boxen">
+
+            </div>
+        </div>
+        <div class="contact">
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">telegram</a>
+        </div>
+    </div>
     <script>
+        container = document.getElementById("main");
+
+        const text = new Blotter.Text("Web Developer", {
+            family: "serif",
+            size: 180,
+            fill: "#fff"
+        });
+
+        let material = new Blotter.LiquidDistortMaterial();
+
+        material.uniforms.uSpeed.value = 0.3;
+        material.uniforms.uVolatility.value = 0.1;
+        material.uniforms.uSeed.value = 0.1;
+
+        let blotter = new Blotter(material, {
+            texts: text
+        });
+
+        let scope = blotter.forText(text);
+
+        scope.appendTo(container);
+
         $(document).ready(function () {
             var a = document.querySelectorAll(".box span");
             var i = 1;
@@ -48,17 +95,19 @@
         function preloadercount() {
             var counter = setInterval(function () {
                 var c = parseInt($(".preloader-count").text());
-                c+=1;
+                c += 1;
                 $(".preloader-count").text((c).toString());
                 if (c == 100) {
                     clearInterval(counter);
-                    $(".preloader-count").addClass("Hide");
+                    $(".preloader-count").addClass("hidea");
+                    $(".preloader-count").addClass("hide");
                     $(".preloader").addClass("active");
                 }
-            },65);
-            preloader-count();
+            }, 65);
+            preloader - count();
         }
         preloadercount();
+
     </script>
 </body>
 

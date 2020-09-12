@@ -57,18 +57,18 @@ body{
     font-size: 180px;    
 }
  .hidea{    
-    transition-duration: 1s;    
+    transition-duration: 0.5s;    
     -webkit-text-fill-color: #fff;
  }
  .hide{    
-    transition-delay: 1s;
-    transition-duration: 1s;
+    transition-delay: 0.5s;
+    transition-duration: 0.8s;
     bottom: -150vh;
 }
  .active{
     transform: translateY(-100vh);
     transition-duration:  0.5s;
-    transition-delay: 2s;    
+    transition-delay: 1.3s;    
 }
 .preloader::before{
     content: 'LOADING';
@@ -80,7 +80,7 @@ body{
     left: 50%;
     transform: translate(-49.5%,-55%);
 }
-@media only screen and (max-width:500px)
+@media only screen and (max-width:400px)
 {
     body{
         font-size: 24px;        
@@ -99,23 +99,76 @@ body{
     .preloader-count:after{
         font-size: 85px;
     }
-     .hidea{    
-    transition-duration: 1s;    
-    -webkit-text-fill-color: #fff;
- }
-    .hide{    
-        transition-delay: 1s;
-        transition-duration: 1s;
-        bottom: -150vh;
-    }
-     .active{
-    transform: translateY(-100vh);
-    transition-duration:  0.5s;
-    transition-delay: 2s;    
-}
 }
 .home{    
-    background-color:#3a3636;  
-    height: 100vh;    
+    /* box-shadow: 60px 60px 10px 80px #31322d inset; */
+    /* border: 10px solid black; */
+    box-sizing: border-box;
+    background-color: #453f3d;
+    height: 100vh;   
+    width: 100vw;
+    display: grid; 
+    grid-template-columns:20% 20% 20% 20% 20%;
+    grid-template-rows:20% 20% 20% 20% 20%;   
+    grid-gap: 0.2rem;
+    font-size: 32px;
 }
-
+.title{
+    background-color: #0d0d0d;
+    grid-area:1/1/5/2;
+    padding-top: 11%;
+    padding-left: 10%;
+    letter-spacing: 10px;
+}
+.title div{
+    display: block;
+}
+.main1{
+    background-color: #0d0d0d;
+    grid-area:1/2/6/5;
+    position: relative;
+}
+#main{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    /* transform: translate(-50%,-50%); */
+    /* background-color: black; */
+}
+nav{
+    background-color: #0d0d0d;
+    grid-area:1/5/3/5;
+    padding-top: 12%;
+    padding-left: 42%;    
+}
+nav a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    float: right;
+    padding-right: 25%;
+}
+.por{
+    padding-left: 5%;
+}
+.legacy{
+    background-color: #0d0d0d;
+    grid-area:3/5/6/5;
+}
+.contact{
+    background-color: #0d0d0d;
+    grid-area:5/1/6/2;
+    padding-left: 10%;
+    padding-top: 10%;    
+    letter-spacing: 10px;
+}
+.contact a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+.boxen{
+    background-color: white;
+}
